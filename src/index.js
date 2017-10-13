@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('webpack-hot-server-middleware');
+const debug = require('debug')('koa-webpack-hot-server');
 const path = require('path');
 const requireFromString = require('require-from-string');
 const MultiCompiler = require('webpack/lib/MultiCompiler');
@@ -129,12 +129,12 @@ function webpackHotServerMiddleware(multiCompiler, options) {
         }
     });
 
-    return (req, res, next) => {
-        debug(`Receive request ${req.url}`);
+    return (ctx, next) => {
+        debug(`Receive request ${ctx.req.url}`);
         if (error) {
             return next(error);
         }
-        serverRenderer(req, res, next);
+        return serverRenderer(ctx, next);
     };
 }
 

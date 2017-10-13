@@ -1,7 +1,7 @@
 {
-  "name": "webpack-hot-server-middleware",
+  "name": "koa-webpack-hot-server",
   "version": "0.1.0",
-  "description": "Hot updates Webpack bundles on the server",
+  "description": "Hot updates Webpack bundles on a koa server, forked from Richard Scarrott's webpack-hot-server-middleware",
   "main": "src/",
   "scripts": {
     "test": "jest"
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/60frames/webpack-hot-server-middleware.git"
+    "url": "https://github.com/fsquad/koa-webpack-hot-server.git"
   },
   "author": {
-    "name": "Richard Scarrott",
-    "email": "rich@60fram.es"
+    "name": "Francis Escuadro",
+    "email": "francis@delta-brain.com"
   },
   "license": "MIT",
   "dependencies": {
